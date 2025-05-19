@@ -82,7 +82,7 @@ public class UserDAO {
         String sql = "DELETE FROM users";
         try (Statement st = conn.createStatement()) {
             int rows = st.executeUpdate(sql);
-            return true;
+            return rows > 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
