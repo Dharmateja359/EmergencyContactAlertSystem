@@ -7,7 +7,7 @@ A **Java + JDBC + MySQL** console-based application that monitors users' vital s
 ## 📸 Project Screenshot
 
 <div align="center">
-  <img src="assets/MySQl.png" alt="Emergency Contact Alert System Screenshot" width="600"/>
+  <img src="assets/MySQL.png" alt="Emergency Contact Alert System Screenshot" width="600"/>
   <br>
   <em>Sample console UI showing user registration and alert logic in action.</em>
 </div>
@@ -51,11 +51,10 @@ This project simulates a basic health monitoring system for users. It allows:
 ## 🧾 Database Schema
 
 ### Database: `EmergencyAlertDB`  
-### Table: `user_health_logs`
+### Table: `users`
 
 ```sql
-CREATE TABLE users(
-    Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE users (
     Id INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL,
     Age INT,
@@ -63,6 +62,7 @@ CREATE TABLE users(
     Heart_rate INT,
     Blood_pressure VARCHAR(20),
     Emergency_contact VARCHAR(100),
+    Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 ```
 
