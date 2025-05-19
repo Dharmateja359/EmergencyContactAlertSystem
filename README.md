@@ -51,9 +51,10 @@ This project simulates a basic health monitoring system for users. It allows:
 ## 🧾 Database Schema
 
 ### Database: `EmergencyAlertDB`  
-### Table: `user_health_logs`
+### Table: `users`
 
 ```sql
+<<<<<<< HEAD
 CREATE TABLE user_health_logs (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_name VARCHAR(100) NOT NULL,
@@ -63,6 +64,17 @@ CREATE TABLE user_health_logs (
     heart_rate INT,
     blood_pressure VARCHAR(20),
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+=======
+CREATE TABLE users (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Age INT,
+    Blood_group VARCHAR(5),
+    Heart_rate INT,
+    Blood_pressure VARCHAR(20),
+    Emergency_contact VARCHAR(100),
+    Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+>>>>>>> e803718
 );
 ```
 
