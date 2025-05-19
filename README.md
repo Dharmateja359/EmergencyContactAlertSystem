@@ -7,7 +7,7 @@ A **Java + JDBC + MySQL** console-based application that monitors users' vital s
 ## 📸 Project Screenshot
 
 <div align="center">
-  <img src="assets/MySQl.png" alt="Emergency Contact Alert System Screenshot" width="600"/>
+  <img src="assets/MySQL.png" alt="Emergency Contact Alert System Screenshot" width="600"/>
   <br>
   <em>Sample console UI showing user registration and alert logic in action.</em>
 </div>
@@ -62,7 +62,6 @@ CREATE TABLE user_health_logs (
     emergency_contact VARCHAR(100),
     heart_rate INT,
     blood_pressure VARCHAR(20),
-    glucose_level INT,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 ```
