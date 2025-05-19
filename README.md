@@ -7,7 +7,7 @@ A **Java + JDBC + MySQL** console-based application that monitors users' vital s
 ## 📸 Project Screenshot
 
 <div align="center">
-  <img src="assets/screenshot.png" alt="Emergency Contact Alert System Screenshot" width="600"/>
+  <img src="assets/MySQl.png" alt="Emergency Contact Alert System Screenshot" width="600"/>
   <br>
   <em>Sample console UI showing user registration and alert logic in action.</em>
 </div>
@@ -52,3 +52,56 @@ This project simulates a basic health monitoring system for users. It allows:
 
 ### Database: `EmergencyAlertDB`  
 ### Table: `user_health_logs`
+
+```sql
+CREATE TABLE user_health_logs (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_name VARCHAR(100) NOT NULL,
+    age INT,
+    blood_group VARCHAR(5),
+    emergency_contact VARCHAR(100),
+    heart_rate INT,
+    blood_pressure VARCHAR(20),
+    glucose_level INT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+## 🚀 Installation & Setup
+
+1. **Prerequisites**
+   - Java JDK 8 or higher
+   - MySQL Server
+   - MySQL Connector/J (JDBC driver)
+
+2. **Database Setup**
+   ```sql
+   CREATE DATABASE EmergencyAlertDB;
+   USE EmergencyAlertDB;
+   ```
+   Then run the schema creation script above.
+
+3. **Project Setup**
+   - Clone the repository
+   - Add MySQL JDBC driver to your project's classpath
+   - Update database credentials in `src/resources/database.properties`
+
+4. **Running the Application**
+   ```bash
+   javac -cp ".:mysql-connector-java.jar" src/*.java
+   java -cp ".:mysql-connector-java.jar" Main
+   ```
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
