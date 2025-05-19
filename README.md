@@ -54,17 +54,6 @@ This project simulates a basic health monitoring system for users. It allows:
 ### Table: `users`
 
 ```sql
-<<<<<<< HEAD
-CREATE TABLE user_health_logs (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    user_name VARCHAR(100) NOT NULL,
-    age INT,
-    blood_group VARCHAR(5),
-    emergency_contact VARCHAR(100),
-    heart_rate INT,
-    blood_pressure VARCHAR(20),
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-=======
 CREATE TABLE users (
     Id INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL,
@@ -74,7 +63,6 @@ CREATE TABLE users (
     Blood_pressure VARCHAR(20),
     Emergency_contact VARCHAR(100),
     Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
->>>>>>> e803718
 );
 ```
 
